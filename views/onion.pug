@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  - var results = [{"Onion": "Red onion", "Dealer": "kevin farms", "price": 150.8, "Rating": 4.7,"Category":"low"},{"Onion": "white onion", "Dealer": "David farms", "price": 301.6, "Rating": 4.2,"Category":"medium"},{"Onion": "Yellow onion", "Dealer": "laura Farms", "price": 113.1, "Rating": 4.7,"Category":"high"}]
+  div.container-fluid 
+    div.row 
+        each item, index in results
+            div.col-sm-2(onclick=`buy(${index})`) Onion Name: #{item["Onion"]} <br> Dealer: #{item["Dealer"]} <br> price: #{item["price"]} <br> Rating: #{item["Rating"]} <br> Category: #{item["Category"]}
+
+  script.
+    function buy(index) {
+      alert("You purchased item " + index)
+     }
