@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1= title
-  - var results = [{"Onion": "Red onion", "Dealer": "kevin farms", "price": 150.8, "Rating": 4.7,"Category":"low"},{"Onion": "white onion", "Dealer": "David farms", "price": 301.6, "Rating": 4.2,"Category":"medium"},{"Onion": "Yellow onion", "Dealer": "laura Farms", "price": 113.1, "Rating": 4.7,"Category":"high"}]
+  - var results = onion_results
   div.container-fluid 
     div.row 
         each item, index in results

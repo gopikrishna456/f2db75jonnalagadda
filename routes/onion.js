@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
+const onion_controlers= require('../controllers/onion'); 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('onion', { title: 'Search Results for Onion Class' });
- });
+router.get('/', onion_controlers.onion_view_all_Page );
 
  module.exports = router;
