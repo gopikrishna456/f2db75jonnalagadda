@@ -28,6 +28,10 @@ var appRouter = require('./routes/onion');
 var gridbuildRouter = require('./routes/gridbuild');
 var selector=require('./routes/selector');
 var resourceRouter=require('./routes/resource');
+var detailRouter=require('./routes/oniondetail')
+var createRouter=require('./routes/onioncreate')
+var updateRouter=require('./routes/onionupdate')
+var deleteRouter=require('./routes/oniondelete')
 //const onion = require("./models/onion");
 
 
@@ -51,6 +55,10 @@ app.use('/onion', appRouter);
 app.use('/gridbuild', gridbuildRouter);
 app.use('/selector', selector);
 app.use('/resource',resourceRouter)
+app.use('/onion',updateRouter)
+app.use('/onion',createRouter)
+app.use('/onion',detailRouter)
+app.use('/onion',deleteRouter)
 
 
 // We can seed the collection if needed on server start

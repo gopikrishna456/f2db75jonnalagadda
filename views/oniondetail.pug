@@ -1,0 +1,24 @@
+extends layout 
+ 
+block content 
+  h1= title 
+ 
+  -let onionId = toShow._id 
+  - let onionDealer = toShow.Dealer
+  - let onion_price = toShow.price 
+  - let onionRating = toShow.Rating
+  - let onionCategory = toShow.Category 
+  div 
+    div.row 
+      div(class='onionAttr mr-3') onion Dealer is: 
+      div #{onionDealer} 
+    div.row 
+      div(class='onionAttr mr-3') onion price is: 
+       div #{onion_price} 
+    div.row 
+      div(class='onionAttr mr-3') onion Rating is: 
+      div #{onionRating} 
+    div.row 
+      div(class='onionAttr mr-3') onion Category is: 
+      div #{onionCategory} 
+
