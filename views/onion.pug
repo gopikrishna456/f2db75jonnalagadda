@@ -1,7 +1,12 @@
 extends layout
 
 block content
+  style.
+    body{
+      background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('https://resources.markon.com/sites/default/files/styles/large/public/pi_photos/Onions_Red_Hero.jpg')
+    }
   h1= title
+  a(class='btn btn-info' href=`/onion/create`) Create new Onion Instance
   - var results = onion_results
   div.container-fluid 
     div.row 

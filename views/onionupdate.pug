@@ -2,7 +2,9 @@ extends layout
  
 block content 
   h1= title 
- 
+  if (toShow == null)
+    h2 No instance to update
+   else
   - let onionid = toShow._id 
   - let Onion= toShow.Onion 
   - let Dealer= toShow.Dealer
