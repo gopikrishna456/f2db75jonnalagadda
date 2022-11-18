@@ -11,9 +11,16 @@ block content
   div.container-fluid 
     div.row 
         each item, index in results
+           - let destination = `dispatch(\"/costumes/update?id=${item._id}\")` 
             div.col-sm-2(onclick=`buy(${index})`) Onion Name: #{item["Onion"]} <br> Dealer: #{item["Dealer"]} <br> price: #{item["price"]} <br> Rating: #{item["Rating"]} <br> Category: #{item["Category"]}
+             <br>
+             button.btn( class="btn-primary ml-1", onclick= destination) Update
 
   script.
     function buy(index) {
       alert("You purchased item " + index)
      }
+       function dispatch(path){ 
+      window.location.href=path 
+    } 
+ 
