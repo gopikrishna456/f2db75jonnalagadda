@@ -74,7 +74,7 @@ exports.onion_create_post = async function(req, res) {
 exports.onion_detail = async function(req, res) { 
     console.log("detail"  + req.params.id) 
     try { 
-        result = await onion.findById( req.params.id) 
+        result = await onion.findById(req.params.id) 
         res.send(result) 
     } catch (error) { 
         res.status(500) 

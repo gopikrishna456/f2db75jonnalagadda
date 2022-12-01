@@ -11,7 +11,7 @@ block content
   div.container-fluid 
     div.row 
         each item, index in results
-           - let destination = `dispatch(\"/costumes/update?id=${item._id}\")` 
+           - let destination = `dispatch(\"/onion/update?id=${item._id}\")` 
             div.col-sm-2(onclick=`buy(${index})`) Onion Name: #{item["Onion"]} <br> Dealer: #{item["Dealer"]} <br> price: #{item["price"]} <br> Rating: #{item["Rating"]} <br> Category: #{item["Category"]}
              <br>
              button.btn( class="btn-primary ml-1", onclick= destination) Update
